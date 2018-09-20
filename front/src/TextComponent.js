@@ -10,11 +10,19 @@ class TextComponent extends Component {
     }
   }
 
+  change(event){
+    const target = event.target;
+    const value = target.value;
+    this.setState({
+      jsonString: value
+    });
+  }
+  
 
   render() {
     return (
       <div>
-        <textarea name="jsoninput" ref={(text) => this.texttarget=text} cols="30" rows="10"></textarea>
+        <textarea onChange={this.change} value={this.state.jsonString} name="jsoninput" ref={(text) => this.texttarget=text } cols="30" rows="10"></textarea>
       </div>
     );
   }
