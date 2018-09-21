@@ -2,8 +2,14 @@
   "name": "parcial1",
   "version": "0.0.0",
   "private": true,
+  "engines": {
+    "node": "8.11.4",
+    "npm": "^6.4.1",
+    "yarn": "1.9.4"
+  },
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "heroku-postbuild": "cd cliente && yarn install && yarn run build"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
