@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import Graph from './Graph';
+
 import TextComponent from './TextComponent';
 
 class App extends Component {
@@ -18,7 +18,6 @@ class App extends Component {
       return (
         <div >
           <TextComponent/>
-          <Graph/>
         </div>
         );
       }
