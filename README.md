@@ -1,6 +1,10 @@
 # Parcial1
 
+Aplicación que permite generar visualizaciones con Vega-Lite utilizando Vega-Embed.
 
+* Permite cargar datasets en formato CSV, parsea utilizando Papaparse y permite modificar el json resultado.
+* Se pueden modificar los specs de Vega dinamicamente.
+* Permite guardar las visualizaciones y verlas mas tarde.
 
 
 ## Installation
