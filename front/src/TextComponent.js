@@ -160,7 +160,7 @@ class TextComponent extends Component {
               <Alert color='warning' isOpen={this.state.alertVisible}><strong>{this.state.alertName}</strong> - {this.state.alertMessage}</Alert>
 
               <Label>
-      Upload file:
+                 Upload file:
                 <Input type="file" onChange={this.onFileChange} />
               </Label>
 

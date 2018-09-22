@@ -76,6 +76,30 @@ class Graph extends Component {
     })
   }
 
+  componentDidMount () {
+    this.setState({ data: this.props.data, spec: this.props.spec }, () => {
+      vegaEmbed(this.div, this.props.spec)
+        .catch(error => {
+          // console.log(error);
+          this.handleError(true, error)
+          // throw error;
+        })
+        .then((res) => {
+          if (!this.state.error) {
+            res.view.insert('myData', this.props.data).run()
+          } else {
+            this.handleError(false, null)
+            try {
+              res.view.insert('myData', this.props.data).run()
+            } catch (Error) {
+              this.handleError(false, null)
+              console.log('Error en el spec')
+            }
+          }
+        })
+    })
+  }
+
   render () {
     return (
       <div>

@@ -36,6 +36,26 @@ router.post('/postVis', function(req,res){
   res.send(JSON.stringify({success:true}));
 });
 
+router.get('/getVis', function(req,res){
+  res.setHeader('Content-Type', 'application/json');
+  getData((data) =>
+    res.send(data)
+  );
+});
 
+function getData(callback){
+  MongoClient.connect(url, function(err, client) {
+    console.log('Connected successfully to server');
+    
+    const db = client.db(dbName);
+
+    db.collection('vis').find({}).toArray(function(err, docs) {
+      console.log('Found founded objects', docs.length);
+      //console.log(docs);
+      callback(docs);
+      client.close();
+    });
+  });
+}
 
 module.exports = router;

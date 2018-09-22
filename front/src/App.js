@@ -1,28 +1,28 @@
-import React, { Component } from 'react';
-import './App.css';
-
-
-import TextComponent from './TextComponent';
+import React, { Component } from 'react'
+import './App.css'
+import TextComponent from './TextComponent'
+import ListComponent from './ListComponent'
+import { Container } from 'reactstrap'
+import ListVis from './ListVis';
 
 class App extends Component {
-  constructor(props){
-    super(props);
-    
-    this.state ={
-      }
+  constructor (props) {
+    super(props)
+
+    this.state = {
     }
-    
-    
-    render() {
-      
-      return (
-        <div >
+  }
+
+  render () {
+    return (
+      <div >
+        <Container>
           <TextComponent/>
-        </div>
-        );
-      }
-      
-    }
-    
-    export default App;
-    
+          <ListVis/>
+        </Container>
+      </div>
+    )
+  }
+}
+
+export default App
