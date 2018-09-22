@@ -147,15 +147,15 @@ class TextComponent extends Component {
           <Row>
             <Col>
               <div>
-                <Label htmlFor="">Json Spec</Label>
-                <textarea onChange={(e) => this.changeSpec(e)} value={JSON.stringify(this.state.jsonSpec, null, 2)} name="jsonspec" cols="30" rows="10"></textarea>
+                <Label htmlFor="">Json Spec</Label><br/>
+                <textarea onChange={(e) => this.changeSpec(e)} value={JSON.stringify(this.state.jsonSpec, null, 2)} name="jsonspec" cols="50" rows="20"></textarea>
               </div>
 
             </Col>
             <Col>
               <div>
-                <Label htmlFor="">Json Data</Label>
-                <textarea onChange={(e) => this.changeData(e)} value={JSON.stringify(this.state.jsonData, null, 2)} name="jsondata" cols="30" rows="10"></textarea>
+                <Label htmlFor="">Json Data</Label><br/>
+                <textarea onChange={(e) => this.changeData(e)} value={JSON.stringify(this.state.jsonData, null, 2)} name="jsondata" cols="50" rows="20"></textarea>
               </div>
               <Alert color='warning' isOpen={this.state.alertVisible}><strong>{this.state.alertName}</strong> - {this.state.alertMessage}</Alert>
 

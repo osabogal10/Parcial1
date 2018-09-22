@@ -23,7 +23,7 @@ class ListComponent extends Component {
   render () {
     return (
       <div>
-        <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
+        <Card body outline color="primary">
           <CardTitle>{this.props.title}</CardTitle>
           <CardText>Por: {this.props.author}</CardText>
           <Button onClick={this.toggle}>Abrir</Button>
